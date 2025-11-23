@@ -63,9 +63,13 @@ Bella uses a **sweet, friendly, professional** persona tuned with the **Shimmer*
 ```bash
 git clone https://github.com/yourusername/voice-receptionist.git
 cd voice-receptionist
-## 3. Install Dependencies
 
+### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
+
+### 4. Configure Environment
+```bash
+OPENAI_API_KEY=sk-proj-your-api-key-here
 
 
