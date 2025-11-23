@@ -64,12 +64,20 @@ Bella uses a **sweet, friendly, professional** persona tuned with the **Shimmer*
 git clone https://github.com/yourusername/voice-receptionist.git
 cd voice-receptionist
 
-### 3. Install Dependencies
-```bash
+3. Install Dependencies
+
 pip install -r requirements.txt
 
-### 4. Configure Environment
-```bash
-OPENAI_API_KEY=sk-proj-your-api-key-here
+
+4. Configure Environment
+
+Create a .env file in the root directory and add your API Key:
+
+OPENAI_API_KEY=sk-proj-your-actual-api-key-here
+
+
+5. Run the Application
+
+streamlit run app.py
 
 
