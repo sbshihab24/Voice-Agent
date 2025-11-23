@@ -60,24 +60,91 @@ Bella uses a **sweet, friendly, professional** persona tuned with the **Shimmer*
 - OpenAI API Key with Realtime API access
 
 ### 2. Clone the Repository
+
 ```bash
 git clone https://github.com/yourusername/voice-receptionist.git
 cd voice-receptionist
+```
 
-3. Install Dependencies
+### 3. Install Dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
+### 4. Configure Environment
 
-4. Configure Environment
+Create a `.env` file in the root directory:
 
-Create a .env file in the root directory and add your API Key:
+```env
+OPENAI_API_KEY=sk-proj-your-api-key-here
+```
 
-OPENAI_API_KEY=sk-proj-your-actual-api-key-here
+### 5. Run the Application
 
-
-5. Run the Application
-
+```bash
 streamlit run app.py
+```
 
+---
 
+## 📂 Project Structure
+
+```txt
+voice-receptionist/
+├── .env                  # API Key (DO NOT COMMIT)
+├── .gitignore            # Excluded files
+├── app.py                # Main Streamlit application
+├── ui_components.py      # HTML / JS / WebRTC interface
+├── utils.py              # Token generation & AI prompt logic
+└── requirements.txt      # Python dependencies
+```
+
+---
+
+## 🖼️ How It Works
+
+### 1. Authentication
+```md
+utils.py exchanges your long-lived API key for a short-lived Ephemeral Token (valid for 1 minute).
+```
+
+### 2. WebRTC Connection
+```md
+ui_components.py uses the token to establish a peer-to-peer WebRTC connection to OpenAI.
+```
+
+### 3. Conversation Flow
+```md
+🎤 Microphone audio streams directly to the model  
+🎧 Bella responds instantly  
+🔄 Full interruptibility (you can talk over her naturally)  
+💬 Live transcripts appear in the chat UI  
+```
+
+---
+
+## 🛡️ Privacy & Security
+
+```md
+• Your real API key never leaves the backend  
+• Only short-lived Ephemeral Tokens go to the browser  
+• Audio is streamed in real-time and never stored  
+```
+
+---
+
+## 🤝 Contributing
+
+```md
+Pull requests are welcome.  
+Fork this project and feel free to enhance the assistant.  
+```
+
+---
+
+## 📄 License
+
+```md
+This project is open-source under the MIT License.
+```
