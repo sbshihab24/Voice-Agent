@@ -1,0 +1,25 @@
+--- API Keys & Secrets (CRITICAL) ---
+
+.env
+.streamlit/secrets.toml
+
+--- Python & Cache ---
+
+pycache/
+*.py[cod]
+*$py.class
+
+--- Virtual Environments ---
+
+venv/
+.venv/
+env/
+
+--- OS Metadata ---
+
+.DS_Store
+Thumbs.db
+
+--- Logs ---
+
+*.log
